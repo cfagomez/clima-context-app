@@ -9,7 +9,12 @@ const ClimaProvider = ({children}) => {
         ciudad: '',
     })
 
-    const datosBusqueda = () => {
+    const datosBusqueda = (e) => {
+
+      setBusqueda({
+        ...busqueda,
+        [e.target.name] : e.target.value
+      })
 
     }
 

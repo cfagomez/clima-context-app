@@ -1,6 +1,11 @@
-import React from 'react'
+import useClima from '../hooks/useClima'
 
 const Formulario = () => {
+
+    const {busqueda, datosBusqueda} = useClima()
+
+    const {pais, ciudad} = busqueda
+
   return (
     <div className='contenedor'>
         <form>
@@ -8,19 +13,30 @@ const Formulario = () => {
                 <label>
                     Ciudad
                 </label>
-                <input type="text" />
+                <input 
+                    type="text"
+                    name='ciudad'
+                    id='ciudad'
+                    value={ciudad}
+                    onChange={datosBusqueda}
+                />
             </div>
             <div className='campo'>
                 <label>
                     Pais
                 </label>
-                <select name="pais" id="pais">
+                <select 
+                    name="pais" 
+                    id="pais"
+                    value={pais}
+                    onChange={datosBusqueda}
+                >
                     <option value="">-- Seleccione una opcion --</option>
-                    <option value="argentina">Argentina</option>
-                    <option value="mongolia">Mongolia</option>
-                    <option value="hungria">Hungria</option>
-                    <option value="groenlandia">Groenlandia</option>
-                    <option value="escocia">Escocia</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Mongolia">Mongolia</option>
+                    <option value="Hungria">Hungria</option>
+                    <option value="Groenlandia">Groenlandia</option>
+                    <option value="Escocia">Escocia</option>
                 </select>
             </div>
             <input type="submit" value="Consultar Clima" />
