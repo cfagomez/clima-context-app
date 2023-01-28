@@ -51,14 +51,14 @@ const ClimaProvider = ({children}) => {
 
       } catch (error) {
 
-
+        console.log(error)
 
       }
 
     }
 
   return (
-    <ClimaContext.Provider value={{busqueda, datosBusqueda, error, setError, consultarClima}}>
+    <ClimaContext.Provider value={{busqueda, datosBusqueda, error, setError, consultarClima, resultado}}>
         {children}
     </ClimaContext.Provider>
   )
