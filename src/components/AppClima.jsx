@@ -3,10 +3,9 @@ import Formulario from './Formulario'
 
 const AppClima = () => {
   return (
-    <>
-        <div>AppClima</div>
+    <main>
         <Formulario />
-    </>
+    </main>
   )
 }
 
