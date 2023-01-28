@@ -1,14 +1,36 @@
 import useClima from '../hooks/useClima'
+import Error from './Error'
 
 const Formulario = () => {
 
-    const {busqueda, datosBusqueda} = useClima()
+    const {busqueda, datosBusqueda, error, setError} = useClima()
 
     const {pais, ciudad} = busqueda
 
+    const handleSubmit = (e) => {
+
+        e.preventDefault()
+
+        if (Object.values(busqueda).includes('' )) {
+
+            setError('Todos los campos son obligatorios')
+
+            return
+
+        }
+
+        setError(false)
+
+    }
+
   return (
     <div className='contenedor'>
-        <form>
+        {
+            error && <Error />
+        }
+        <form
+            onSubmit={handleSubmit}
+        >
             <div className='campo'>
                 <label>
                     Ciudad

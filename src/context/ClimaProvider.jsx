@@ -9,6 +9,8 @@ const ClimaProvider = ({children}) => {
         ciudad: '',
     })
 
+    const [error, setError] = useState(false)
+
     const datosBusqueda = (e) => {
 
       setBusqueda({
@@ -19,7 +21,7 @@ const ClimaProvider = ({children}) => {
     }
 
   return (
-    <ClimaContext.Provider value={{busqueda, datosBusqueda}}>
+    <ClimaContext.Provider value={{busqueda, datosBusqueda, error, setError}}>
         {children}
     </ClimaContext.Provider>
   )
