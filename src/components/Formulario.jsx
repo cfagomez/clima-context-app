@@ -3,7 +3,7 @@ import Error from './Error'
 
 const Formulario = () => {
 
-    const {busqueda, datosBusqueda, error, setError} = useClima()
+    const {busqueda, datosBusqueda, error, setError, consultarClima} = useClima()
 
     const {pais, ciudad} = busqueda
 
@@ -20,6 +20,8 @@ const Formulario = () => {
         }
 
         setError(false)
+
+        consultarClima()
 
     }
 
