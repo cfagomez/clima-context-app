@@ -61,6 +61,7 @@ const Formulario = () => {
                     <option value="Hungria">Hungria</option>
                     <option value="Groenlandia">Groenlandia</option>
                     <option value="Escocia">Escocia</option>
+                    <option value="Finlandia">Finlandi</option>
                 </select>
             </div>
             <input type="submit" value="Consultar Clima" />
