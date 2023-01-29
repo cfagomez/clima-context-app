@@ -20,8 +20,16 @@ main {
     padding: 4rem 0 4rem;
 }
 
+@media (min-width: 768px) {
+    .dos-columnas {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+}
+
 .contenedor {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     padding: 4rem;
     border-radius: 1rem;
     background-color: white;
@@ -73,5 +81,27 @@ input[type="submit"]:hover {
 }
 
 .error p {
+    margin: 0;
+}
+
+.clima {
+    text-align: center;
+}
+
+.clima h2 {
+    
+    margin-top: 0;
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+.clima p {
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+.clima > p:first-of-type {
+    font-size: 5rem;
+    font-weight: bolder;
     margin: 0;
 }

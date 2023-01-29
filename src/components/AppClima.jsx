@@ -8,7 +8,7 @@ const AppClima = () => {
   const {resultado} = useClima()
 
   return (
-    <main>
+    <main className='dos-columnas'>
         <Formulario />
         {
           resultado?.name ? <Resultado /> : null
