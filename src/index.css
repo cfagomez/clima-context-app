@@ -24,7 +24,6 @@ main {
     .dos-columnas {
         display: flex;
         justify-content: center;
-        align-items: center;
         gap: 2rem;
     }
 }
@@ -105,6 +104,11 @@ input[type="submit"]:hover {
     font-size: 5rem;
     font-weight: bolder;
     margin: 0;
+}
+
+.no-resultado {
+    text-align: center;
+    padding: 4rem 4rem 0 4rem;
 }
 
 .sk-fading-circle {
